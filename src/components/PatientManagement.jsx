@@ -2,7 +2,7 @@ import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
-import { addPatient } from '../../state/patientsSlice';
+import { addPatient } from '../state/patientsSlice';
 
 const PatientSchema = Yup.object().shape({
     name: Yup.string().required('Name is required'),

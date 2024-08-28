@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addAppointment, updateAppointment, deleteAppointment } from '../../state/appointmentsSlice';
+import { addAppointment, updateAppointment, deleteAppointment } from '../state/appointmentsSlice';
 
 const AppointmentManagement = () => {
     const appointments = useSelector(state => state.appointments);
