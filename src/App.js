@@ -1,5 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import './App.css';
 
 const Dashboard = lazy(() => import('./components/Dashboard'));
 const PatientManagement = lazy(() => import('./components/PatientManagement'));
@@ -10,6 +12,7 @@ const RecordReconciliation = lazy(() => import('./components/RecordReconciliatio
 const App = () => {
   return (
     <Router>
+      <Navbar />
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<Dashboard />} />

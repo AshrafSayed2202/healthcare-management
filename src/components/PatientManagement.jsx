@@ -14,7 +14,7 @@ const PatientManagement = () => {
     const dispatch = useDispatch();
 
     return (
-        <div>
+        <div className='container'>
             <h2>Patient Registration</h2>
             <Formik
                 initialValues={{ name: '', age: '', gender: '' }}

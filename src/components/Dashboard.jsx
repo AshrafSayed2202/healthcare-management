@@ -36,7 +36,7 @@ const Dashboard = () => {
     };
 
     return (
-        <div>
+        <div className='container'>
             <h2>Dashboard</h2>
             <Bar data={data} />
         </div>

@@ -19,7 +19,7 @@ const RecordReconciliation = () => {
     });
 
     return (
-        <div>
+        <div className='container'>
             <h2>Record Reconciliation</h2>
             <ul>
                 {reconciledRecords.map(record => (

@@ -12,7 +12,7 @@ const PatientPortal = () => {
     ];
 
     return (
-        <div>
+        <div className='container'>
             <h2>Patient Portal</h2>
 
             <div>

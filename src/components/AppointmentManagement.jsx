@@ -27,7 +27,7 @@ const AppointmentManagement = () => {
     };
 
     return (
-        <div>
+        <div className='container'>
             <h2>Appointment Management</h2>
             <div>
                 <h3>Schedule Appointment</h3>
