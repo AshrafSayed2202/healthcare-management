@@ -3,6 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useDispatch, useSelector } from 'react-redux';
 import { addPatient } from '../state/patientsSlice';
+import './PatientManagementComponent.css'
 
 const PatientManagement = () => {
     const dispatch = useDispatch();
@@ -48,7 +49,6 @@ const PatientManagement = () => {
                                 <option value="">Select Gender</option>
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
-                                <option value="Other">Other</option>
                             </Field>
                             <ErrorMessage name="gender" component="div" className="error-message" />
                         </div>

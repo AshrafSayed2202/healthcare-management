@@ -14,7 +14,8 @@ export const appointmentsSlice = createSlice({
             }
         },
         deleteAppointment: (state, action) => {
-            return state.filter(appointment => appointment.id !== action.payload.id);
+            console.log("Deleting appointment:", action.payload); // Debugging log
+            return state.filter(appointment => appointment.id !== action.payload);
         }
     }
 });

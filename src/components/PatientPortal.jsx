@@ -10,7 +10,6 @@ const PatientPortal = () => {
         <div className='container patient-portal'>
             <h2>Patient Portal</h2>
             <div className='medical-history'>
-                <h3>Medical History</h3>
                 {patients.map(patient => (
                     <div key={patient.id} className='patient-card'>
                         <h4>{patient.name}</h4>
