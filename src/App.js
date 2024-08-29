@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Dashboard from './components/DashboardComponent';
-import PatientManagement from './components/PatientManagementComponent';
-import AppointmentManagement from './components/AppointmentManagementComponent';
-import PatientPortal from './components/PatientPortalComponent';
+import Dashboard from './components/Dashboard';
+import PatientManagement from './components/PatientManagement';
+import AppointmentManagement from './components/AppointmentManagement';
+import PatientPortal from './components/PatientPortal';
 
 const App = () => {
   return (
