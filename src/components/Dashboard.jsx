@@ -28,7 +28,7 @@ const Dashboard = () => {
         labels: ['Patients', 'Appointments'],
         datasets: [
             {
-                label: 'Healthcare Metrics',
+                label: ['Healthcare Metrics'],
                 data: [patients.length, appointments.length],
                 backgroundColor: ['rgba(75, 192, 192, 0.6)', 'rgba(153, 102, 255, 0.6)']
             }

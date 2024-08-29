@@ -1,46 +1,29 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import './PatientPortalComponent.css';
 
 const PatientPortal = () => {
     const patients = useSelector(state => state.patients);
     const appointments = useSelector(state => state.appointments);
 
-    // Example data for billing
-    const billingInfo = [
-        { patientId: '1', total: '$200', paid: '$150', due: '$50' },
-        { patientId: '2', total: '$500', paid: '$500', due: '$0' },
-    ];
-
     return (
-        <div className='container'>
+        <div className='container patient-portal'>
             <h2>Patient Portal</h2>
-
-            <div>
+            <div className='medical-history'>
                 <h3>Medical History</h3>
                 {patients.map(patient => (
-                    <div key={patient.id}>
+                    <div key={patient.id} className='patient-card'>
                         <h4>{patient.name}</h4>
+                        <h6>ID: {patient.id}</h6>
                         <ul>
                             {appointments
                                 .filter(app => app.patientId === patient.id)
                                 .map(app => (
-                                    <li key={app.id}>
+                                    <li key={app.id} className='appointment-item'>
                                         {app.date} - {app.time} : {app.reason}
                                     </li>
                                 ))}
                         </ul>
-                    </div>
-                ))}
-            </div>
-
-            <div>
-                <h3>Billing Information</h3>
-                {billingInfo.map(bill => (
-                    <div key={bill.patientId}>
-                        <h4>Patient ID: {bill.patientId}</h4>
-                        <p>Total: {bill.total}</p>
-                        <p>Paid: {bill.paid}</p>
-                        <p>Due: {bill.due}</p>
                     </div>
                 ))}
             </div>
