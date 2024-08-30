@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import './RecordReconciliation.css'; // Importing the new CSS
 
 const RecordReconciliation = () => {
     const patients = useSelector(state => state.patients);
@@ -20,12 +21,20 @@ const RecordReconciliation = () => {
     }, [patients, appointments]);
 
     return (
-        <div className='container'>
+        <div className='container record-reconciliation'>
             <h2>Record Reconciliation</h2>
-            <ul>
+            <ul className='reconciliation-list'>
                 {reconciledRecords.map(record => (
-                    <li key={record.id}>
-                        {record.name}: {record.totalAppointments} appointments (Last: {record.lastAppointmentDate})
+                    <li key={record.id} className='reconciliation-item'>
+                        <div className='record-details'>
+                            <h3>{record.name}</h3>
+                            <p>ID: {record.id}</p>
+                            <p>Gender: {record.gender}</p>
+                        </div>
+                        <div className='appointment-details'>
+                            <p>Total Appointments: {record.totalAppointments}</p>
+                            <p>Last Appointment: {record.lastAppointmentDate}</p>
+                        </div>
                     </li>
                 ))}
             </ul>
