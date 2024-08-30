@@ -20,7 +20,7 @@ const PatientPortal = () => {
                                 .filter(app => app.patientId.toString() === patient.id.toString())
                                 .map(app => (
                                     <li key={app.id} className='appointment-item'>
-                                        {app.date} - {app.time} : {app.reason}
+                                        {app.date} - ({app.time}) : {app.reason}
                                     </li>
                                 ))}
                         </ul>

@@ -5,18 +5,19 @@ const RecordReconciliation = () => {
     const patients = useSelector(state => state.patients);
     const appointments = useSelector(state => state.appointments);
 
-    // Logic for reconciliation (this could be expanded based on actual requirements)
-    const reconciledRecords = patients.map(patient => {
-        const patientAppointments = appointments.filter(app => app.patientId === patient.id);
-        const totalAppointments = patientAppointments.length;
-        const lastAppointment = patientAppointments[patientAppointments.length - 1] || {};
+    const reconciledRecords = React.useMemo(() => {
+        return patients.map(patient => {
+            const patientAppointments = appointments.filter(app => app.patientId.toString() === patient.id.toString());
+            const totalAppointments = patientAppointments.length;
+            const lastAppointment = patientAppointments.length > 0 ? patientAppointments[patientAppointments.length - 1].date : 'No appointments';
 
-        return {
-            ...patient,
-            totalAppointments,
-            lastAppointmentDate: lastAppointment.date,
-        };
-    });
+            return {
+                ...patient,
+                totalAppointments,
+                lastAppointmentDate: lastAppointment,
+            };
+        });
+    }, [patients, appointments]);
 
     return (
         <div className='container'>
