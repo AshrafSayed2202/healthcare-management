@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import './PatientPortalComponent.css';
+import './styles/PatientPortalComponent.css';
 
 const PatientPortal = () => {
     const patients = useSelector(state => state.patients);

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import './RecordReconciliation.css'; // Importing the new CSS
+import './styles/RecordReconciliation.css'; // Importing the new CSS
 
 const RecordReconciliation = () => {
     const patients = useSelector(state => state.patients);

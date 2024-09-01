@@ -4,7 +4,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { addAppointment, updateAppointment, deleteAppointment } from '../state/appointmentsSlice';
 import { v4 as uuidv4 } from 'uuid';
-import './AppointmentManagementComponent.css';
+import './styles/AppointmentManagementComponent.css';
 
 const AppointmentManagement = () => {
     const appointments = useSelector(state => state.appointments);
